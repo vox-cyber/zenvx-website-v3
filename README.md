@@ -78,7 +78,7 @@ is retained as `gen_v3_legacy.py`; run `gen_v3.py` for the current site.
 ## Contact behavior
 
 The Contact page’s brief form validates the visitor’s input and opens an encoded
-email draft to **sk@zenvx.in**. It does **not** send mail automatically, use a
+email draft to **abhi@zenvx.in**. It does **not** send mail automatically, use a
 backend or store the brief in local storage. After preparing the draft, the
 visitor can copy the brief if no email app is configured. Direct email links
 are provided for the five people in `TEAM`. Srihari Kalesh and Abhinav T S also
