@@ -94,12 +94,19 @@ visitors default to minimal mode; they can select the richer visual layout
 without enabling animations. Extravagance also has a **Pause motion** control,
 stored as `zenvx-motion` and available on every page.
 
-Motion uses CSS and the native Web Animations API. Local-page navigation has an
-exit/entry curtain. Other treatments include type entry, a continuous typographic
-band, animated SVG paths, floating collage pieces, bounded pointer parallax,
-magnetic links, 3D perspective image tilt, contextual project cursors, scroll-linked
-image movement, reveal transitions, responsive hover rows and animated seals.
-Scrolling remains native. No runtime libraries, external fonts or analytics are
+Motion uses CSS and the native Web Animations API for the base system, plus a
+thin GSAP layer (pinned 3.15.1, vendored and inlined — no network requests)
+for scroll choreography in extravagance mode: scrubbed 3D poster and case-stage
+tilt, hand-drawn scribble stroke draw-ons, scroll-velocity skew on the
+typographic band and a staged hero entrance. The GSAP layer sits behind the
+same `hasMotion()` gate as everything else — paused motion, reduced motion and
+minimal mode revert every tween through `gsap.context()`, and nothing is
+hidden without JavaScript. Local-page navigation has an exit/entry curtain.
+Other treatments include type entry, a continuous typographic band, animated
+SVG paths, floating collage pieces, bounded pointer parallax, magnetic links,
+3D perspective image tilt, contextual project cursors, scroll-linked image
+movement, reveal transitions, responsive hover rows and animated seals.
+Scrolling remains native. No external fonts, analytics or CDN requests are
 required by the site.
 
 ## Browser checks
